@@ -1,7 +1,9 @@
+// Global Object
 var imdb = imdb || {};
 
+// Creating Movie constructor function
 function Movie(title, length, rating, country) {
-    this._id = ++Movie.id;
+    this._id = ++Movie.id;        // Auto-generated id
     this.title = title;
     this.length = length;
     this.rating = rating;
@@ -36,8 +38,9 @@ function Movie(title, length, rating, country) {
         return this._reviews;
     };
 }
-Movie.id = 0;
+Movie.id = 0;           // Setting Movie id
 
+// Setting getMovie property to imdb object
 imdb.getMovie = function(title, length, rating, country) {
     return new Movie(title, length, rating, country);
 };

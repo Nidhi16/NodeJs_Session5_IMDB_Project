@@ -1,5 +1,7 @@
+// Global object
 var imdb = imdb || {};
 
+// Creating Genre Constructor
 function Genre(name) {
     this._id = ++Genre.id;
     this.name = name;
@@ -23,8 +25,9 @@ function Genre(name) {
         return result;
     };
 }
-Genre.id = 0;
+Genre.id = 0;       // Setting genre id
 
+// setting getGenre property to imdb object
 imdb.getGenre = function(name) {
     var genre = new Genre(name);
     return genre;

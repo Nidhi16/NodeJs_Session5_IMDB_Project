@@ -1,5 +1,7 @@
+// Global Object
 var imdb = imdb || {};
 
+// Creating Theatre constructor
 function Theatre(title, length, rating, country) {
     this._id = ++Theatre.id;
     this.title = title;
@@ -36,8 +38,9 @@ function Theatre(title, length, rating, country) {
         return this._reviews;
     };
 }
-Theatre.id = 0;
+Theatre.id = 0;         // setting Theatre id
 
+// setting getTheatre property to imdb object
 imdb.getTheatre = function(title, length, rating, country) {
     var theatre = new Theatre(title, length, rating, country);
     return theatre;
